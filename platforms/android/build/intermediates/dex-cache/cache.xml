@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Android Dev\WORKSPACE\ionBox\platforms\android\build\intermediates\exploded-aar\android\CordovaLib\unspecified\debug\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="89f077df24595c9258a32fd33a81c286361b612c">
+        <dex dex="C:\Android Dev\WORKSPACE\ionBox\platforms\android\build\intermediates\pre-dexed\debug\classes-37769765c3fcadd90b2e9fa3a5fa3fe8352a35bc.jar" />
+    </item>
+    <item
+        jar="C:\Android Dev\WORKSPACE\ionBox\platforms\android\libs\sqlite4java.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="d6234e08ff4e1607ff5321da2579571f05ff778d">
+        <dex dex="C:\Android Dev\WORKSPACE\ionBox\platforms\android\build\intermediates\pre-dexed\debug\sqlite4java-d4e5cdc3510e91dfda36d0287f858f5d52012236.jar" />
+    </item>
+
+</items>

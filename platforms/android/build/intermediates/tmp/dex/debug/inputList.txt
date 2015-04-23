@@ -1,0 +1,3 @@
+C:\Android Dev\WORKSPACE\ionBox\platforms\android\build\intermediates\classes\debug
+C:\Android Dev\WORKSPACE\ionBox\platforms\android\build\intermediates\pre-dexed\debug\classes-37769765c3fcadd90b2e9fa3a5fa3fe8352a35bc.jar
+C:\Android Dev\WORKSPACE\ionBox\platforms\android\build\intermediates\pre-dexed\debug\sqlite4java-d4e5cdc3510e91dfda36d0287f858f5d52012236.jar
