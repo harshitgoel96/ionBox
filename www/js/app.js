@@ -43,7 +43,8 @@ angular.module('starter', ['ionic','starter.controllers', 'ngCordova'])
     url: "/browse",
     views: {
       'menuContent': {
-        templateUrl: "templates/browse.html"
+        templateUrl: "templates/browse.html",
+controller: 'browseCtrl'
       }
     }
   })
@@ -76,5 +77,5 @@ angular.module('starter', ['ionic','starter.controllers', 'ngCordova'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/start');
+  $urlRouterProvider.otherwise('/app/browse');
 });

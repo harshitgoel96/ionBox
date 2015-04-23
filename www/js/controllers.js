@@ -75,6 +75,36 @@ angular.module('starter.controllers', [])
 		}
 		})
 })
+
+
+//browseCtrl	
+.controller('browseCtrl', function($scope, $stateParams) {
+		$scope.Data=JSON.parse('{"hash": "0edd30c0be941dc48f2281cc638eee05", "thumb_exists": false, "bytes": 0, "path": "/", "is_dir": true, "icon": "folder", "root": "dropbox", "contents": [{"rev": "42e41048b", "thumb_exists": false, "path": "/dummy folder", "is_dir": true, "icon": "folder", "read_only": false, "modifier": null, "bytes": 0, "modified": "Thu, 23 Apr 2015 05:50:05 +0000", "size": "0 bytes", "root": "dropbox", "revision": 4}, {"rev": "12e41048b", "thumb_exists": false, "path": "/Getting Started.pdf", "is_dir": false, "client_mtime": "Thu, 11 Dec 2014 11:22:10 +0000", "icon": "page_white_acrobat", "read_only": false, "modifier": null, "bytes": 249159, "modified": "Thu, 11 Dec 2014 11:22:09 +0000", "size": "243.3 KB", "root": "dropbox", "mime_type": "application/pdf", "revision": 1}, {"rev": "32e41048b", "thumb_exists": false, "path": "/Henning Nelms - Magic and Showmanship.pdf", "is_dir": false, "client_mtime": "Fri, 12 Dec 2014 06:17:26 +0000", "icon": "page_white_acrobat", "read_only": false, "modifier": null, "bytes": 56311222, "modified": "Fri, 12 Dec 2014 06:17:26 +0000", "size": "53.7 MB", "root": "dropbox", "mime_type": "application/pdf", "revision": 3}, {"rev": "22e41048b", "thumb_exists": false, "path": "/mycolt.zip", "is_dir": false, "client_mtime": "Thu, 11 Dec 2014 11:31:08 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 86047754, "modified": "Thu, 11 Dec 2014 11:31:08 +0000", "size": "82.1 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 2}], "size": "0 bytes"}');
+		$scope.contents=$scope.Data.contents;
+		$scope.shouldShowDelete=false;
+$scope.alerter=function(text){
+alert(text);
+}
+		$scope.toggleDelete=function(){
+$scope.shouldShowDelete=!$scope.shouldShowDelete;
+		}
+		$scope.getIconClass=function(appIcon){
+			//console.log(appIcon);
+			switch(appIcon)
+			{
+				case "page_white_compressed":
+					return "icon fa fa-file-archive-o";
+					break;
+					case "page_white_acrobat":
+					return "icon fa fa-file-pdf-o";
+					break;
+					case "folder":
+					return "icon ion-folder";
+					break;
+			}
+			return "icon ion-document"
+		}
+})
 	
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });

@@ -1,5 +1,25 @@
 <ion-view view-title="Browse">
+<ion-nav-buttons side="right">
+      <button class="button button-icon icon ion-ios-minus-outline" ng-click="toggleDelete()">
+	  </button>
+	 </ion-nav-buttons>
   <ion-content>
-    <h1>Browse</h1>
+	<ion-list  show-delete="shouldShowDelete">
+		<ion-item ng-repeat="content in contents" class="item-icon-left item-icon-right">
+			
+			<i ng-class="getIconClass(content.icon)"></i>
+			
+			
+			 <h2 style="height:22px !important">{{content.path}}</h2>
+			 
+			 <p ng-if="content.is_dir!=true">{{content.size}}</p>
+			 <p ng-if="content.is_dir">Folder</p>
+			 
+				<i class=" icon ion-ios-cloud-download" ng-if="content.is_dir!=true" ng-click="alerter('start download')"></i>
+				<i class="icon ion-chevron-right" ng-if="content.is_dir" ng-click="alerter('enter dir')"></i>
+				<ion-delete-button class="ion-minus-circled" ng-if="content.is_dir!=true">
+				</ion-delete-button>
+		</ion-item>
+	</ion-list>
   </ion-content>
 </ion-view>
