@@ -22,9 +22,9 @@ public class CacheDBHelper extends SQLiteOpenHelper{
 		super(context,DB_Name,null,DB_Version);
 	}
 	@Override public void onCreate(SQLiteDatabase database){
-		LOG.d("Create the db",DB_Create);
+		LOG.e("Create the db",DB_Create);
 		database.execSQL(DB_Create);
-		LOG.d("Create the db","Success");
+		LOG.e("Create the db","Success");
 	}
 	@Override public void onUpgrade(SQLiteDatabase db, int oldV,int newV){
 		db.execSQL("Drop table if exists "+TABLE_CAHCE);

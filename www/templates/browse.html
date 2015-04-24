@@ -4,11 +4,11 @@
 	  </button>
 	 </ion-nav-buttons>
   
-	<ion-tabs class="tabs-subtle tabs-top tabs-striped tabs-color-positive  tabs-icon-left">
+	<ion-tabs class="tabs-subtle tabs-top tabs-striped tabs-color-positive  tabs-icon-left has-header">
 	<ion-tab title="My DropBox" icon="fa fa-dropbox" >
 	<ion-content class="correct-tabs-top">
-  <ion-list  show-delete="shouldShowDelete ">
-		<ion-item ng-repeat="content in contents" class="item-icon-left item-icon-right">
+  <ion-list  show-delete="shouldShowDelete " >
+		<ion-item collection-repeat="content in contents" class="item-icon-left item-icon-right">
 			
 			<i ng-class="getIconClass(content.icon)"></i>
 			

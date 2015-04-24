@@ -47,11 +47,13 @@ public class CacheSystem {
 	public boolean addToCache(String _key, String _value) {
 		
 		deleteFromCache(_key);
-
+		
 		ContentValues values = new ContentValues();
 		values.put(CacheDBHelper.Key, _key);
 		values.put(CacheDBHelper.Value, _value);
 		long insertID = this.db.insert(CacheDBHelper.TABLE_CAHCE, null, values);
+		
+		LOG.e("@@@@@ INSIDE addToCache",String.valueOf(insertID));
 		
 		if (insertID != -1) {
 			return true;
@@ -73,14 +75,14 @@ public class CacheSystem {
 			Cursor cursor = this.db.query(CacheDBHelper.TABLE_CAHCE, this.allColumns,
 				CacheDBHelper.Key + " = '" + _key+"'", null, null, null, null, null);
 		if (cursor.moveToFirst()) {
-			LOG.d("GET CAHCE VALUE","got key");
+			LOG.e("GET CAHCE VALUE","got key");
 			if (!cursor.isAfterLast()) {
 				return cursor.getString(1);
 			}
 			close();
 			
 		}
-		LOG.d("GET CAHCE VALUE","got no value");
+		LOG.e("GET CAHCE VALUE","got no value");
 		return null;}
 		catch(Exception E)
 		{
