@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ionicframework.ionbox637903"
     android:hardwareAccelerated="true"
-    android:versionCode="10"
+    android:versionCode="18"
     android:versionName="0.0.1" >
 
     <uses-sdk
-        android:minSdkVersion="10"
+        android:minSdkVersion="15"
         android:targetSdkVersion="22" />
 
     <supports-screens

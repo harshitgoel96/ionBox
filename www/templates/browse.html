@@ -5,10 +5,10 @@
 	 </ion-nav-buttons>
   
 	<ion-tabs class="tabs-subtle tabs-top tabs-striped tabs-color-positive  tabs-icon-left has-header">
-	<ion-tab title="My DropBox" icon="fa fa-dropbox" >
+	<ion-tab title="My DropBox" icon="fa fa-dropbox" on-select="getPathContent()" >
 	<ion-content class="correct-tabs-top">
   <ion-list  show-delete="shouldShowDelete " >
-		<ion-item collection-repeat="content in contents" class="item-icon-left item-icon-right">
+		<ion-item ng-repeat="content in contents" class="item-icon-left item-icon-right" ng-click="getPathContent(content)">
 			
 			<i ng-class="getIconClass(content.icon)"></i>
 			
@@ -20,10 +20,10 @@
 			 
 			 <ion-delete-button class="ion-minus-circled" ng-if="content.is_dir!=true">
 				</ion-delete-button>
-			 
+			 <!--
 				<i class=" icon ion-ios-cloud-download" ng-if="content.is_dir!=true && !shouldShowDelete" ng-click="alerter('start download')"></i>
 				<i class="icon ion-chevron-right" ng-if="content.is_dir && !shouldShowDelete" ng-click="alerter('enter dir')"></i>
-				
+				-->
 		</ion-item>
 	</ion-list>
 	</ion-content>

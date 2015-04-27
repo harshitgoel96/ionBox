@@ -1,15 +1,14 @@
 package com.harshit.ionBox.DB;
 
+import org.json.JSONObject;
+
 public class bckModel {
 	String reqName;
-	String request;
+	String token;
 	String URL;
-	String soapAction;
-	String spAuth;
-	String tunAuth;
-	String sfAuth;
+	JSONObject args;
 	CacheSystem cache;
 	//Context context;
-	String listName;
+	
 	boolean noServerRequest = false;
 }
