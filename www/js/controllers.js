@@ -125,13 +125,13 @@ angular.module('starter.controllers', [])
 	$scope.contents = [];
 	$scope.currentPath = "/";
 	$scope.goBackPath = "/";
-	$scope.getPathContent = function (fileMeta) {
-		//getFolderContent
-		if (!fileMeta && $scope.currentPath === "/") {
-			//	alert("called by root");
-			//$scope.Data = JSON.parse('{"hash": "ad37ce1527997767665ceca95d063da8", "thumb_exists": false, "bytes": 0, "path": "/", "is_dir": true, "icon": "folder", "root": "dropbox", "contents": [{"rev": "380688e90e", "thumb_exists": false, "path": "/CSO  IPA lab F-1-0.10FP.app.zip", "is_dir": false, "client_mtime": "Thu, 25 Apr 2013 12:24:26 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 59803, "modified": "Thu, 25 Apr 2013 12:24:26 +0000", "size": "58.4 KB", "root": "dropbox", "mime_type": "application/zip", "revision": 56}, {"rev": "5d0688e90e", "thumb_exists": false, "path": "/dojo-release-1.10.1.zip", "is_dir": false, "client_mtime": "Thu, 18 Sep 2014 08:31:31 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 13698701, "modified": "Thu, 18 Sep 2014 08:31:31 +0000", "size": "13.1 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 93}, {"rev": "5a0688e90e", "thumb_exists": false, "path": "/fos_android_v29.zip", "is_dir": false, "client_mtime": "Tue, 02 Sep 2014 10:01:41 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 45936983, "modified": "Tue, 02 Sep 2014 10:01:41 +0000", "size": "43.8 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 90}, {"rev": "70688e90e", "thumb_exists": false, "path": "/Getting Started.pdf", "is_dir": false, "client_mtime": "Thu, 15 Mar 2012 13:47:04 +0000", "icon": "page_white_acrobat", "read_only": false, "modifier": null, "bytes": 246000, "modified": "Thu, 15 Mar 2012 13:47:04 +0000", "size": "240.2 KB", "root": "dropbox", "mime_type": "application/pdf", "revision": 7}, {"rev": "580688e90e", "thumb_exists": false, "path": "/iosFeetOnStreet.zip", "is_dir": false, "client_mtime": "Fri, 25 Jul 2014 09:03:22 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 165794592, "modified": "Fri, 25 Jul 2014 09:03:22 +0000", "size": "158.1 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 88}, {"rev": "850688e90e", "thumb_exists": false, "path": "/mycolt.zip", "is_dir": false, "client_mtime": "Fri, 21 Nov 2014 06:37:40 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 50902354, "modified": "Fri, 21 Nov 2014 06:37:40 +0000", "size": "48.5 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 133}, {"rev": "3a0688e90e", "thumb_exists": false, "path": "/newCSO_1.17_tg final.zip", "is_dir": false, "client_mtime": "Tue, 04 Jun 2013 07:52:29 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 8270863, "modified": "Tue, 04 Jun 2013 13:29:12 +0000", "size": "7.9 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 58}, {"rev": "590688e90e", "thumb_exists": false, "path": "/realIOSFeetOnStreet.zip", "is_dir": false, "client_mtime": "Fri, 25 Jul 2014 11:29:36 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 34469132, "modified": "Fri, 25 Jul 2014 11:29:36 +0000", "size": "32.9 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 89}, {"rev": "620688e90e", "thumb_exists": false, "path": "/special", "is_dir": true, "icon": "folder", "read_only": false, "modifier": null, "bytes": 0, "modified": "Sat, 27 Sep 2014 08:26:34 +0000", "size": "0 bytes", "root": "dropbox", "revision": 98}, {"rev": "5e0688e90e", "thumb_exists": false, "path": "/telerik.kendoui.professional.2014.2.903.trial.zip", "is_dir": false, "client_mtime": "Thu, 18 Sep 2014 08:32:03 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 33056198, "modified": "Thu, 18 Sep 2014 08:32:03 +0000", "size": "31.5 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 94}, {"rev": "420688e90e", "thumb_exists": false, "path": "/TG_ProvEng", "is_dir": true, "icon": "folder", "read_only": false, "modifier": null, "bytes": 0, "modified": "Fri, 16 Aug 2013 09:28:01 +0000", "size": "0 bytes", "root": "dropbox", "revision": 66}, {"rev": "5f0688e90e", "thumb_exists": false, "path": "/touch-2.4.0-commercial.zip", "is_dir": false, "client_mtime": "Thu, 18 Sep 2014 08:32:58 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 56849198, "modified": "Thu, 18 Sep 2014 08:32:58 +0000", "size": "54.2 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 95}], "size": "0 bytes"}');
-			//$scope.contents = $scope.Data.contents;
-			console.log($scope.currentPath);
+	$scope.doExecOnPath=function(path){
+	
+		$scope.contents.length=0;
+		$scope.goBackPath = $scope.currentPath ;
+		$scope.currentPath =path;
+		
+		console.log($scope.currentPath);
 			$ionicLoading.show({
 				template : 'Loading...'
 			});
@@ -140,43 +140,60 @@ angular.module('starter.controllers', [])
 				console.log("browserrr " + JSON.stringify(data.response.contents));
 				
 				$scope.$apply(function(){
-					$scope.contents = data.response.contents;
+				
+					var tempContents = data.response.contents;
+					for(var i=0;i<tempContents.length;i++){
+						
+						var indexS=tempContents[i].path.lastIndexOf("/");
+						var displayName=tempContents[i].path.substr(indexS+1);
+						tempContents[i].displayName=displayName;
+						$scope.contents.push(tempContents[i]);
+					}
+					var newPath=data.response.path;
+					var indexOfS=newPath.lastIndexOf("/");
+					if(newPath.length>1){
+						var parentPath=newPath.substr(0,indexOfS+1);
+						console.log("**@@@***  "+parentPath);
+						var temp={};
+						temp.is_dir=true;
+						temp.path=parentPath;
+						temp.displayName='..';
+						//temp.isGoBack==true;
+					$scope.contents.unshift(temp);
+					
+					}
+					/*
+					if($scope.currentPath!==$scope.goBackPath){
+					var temp={};
+					temp.is_dir=true;
+					temp.path=$scope.goBackPath;
+					temp.isGoBack==true;
+					$scope.contents.unshift(temp);
+					}*/
+					$ionicLoading.hide();
 				});
-				$ionicLoading.hide();
+				
 			},
 				function err(err) {
 				console.log("brows errr!!!!!!!  " + err);
 			},
 				'IonBoxPlugin',
 				'getFolderContent',
-				[true]);
+				[false,path]);
+		
+	}
+	$scope.getPathContent = function (fileMeta) {
+		//getFolderContent
+		if (!fileMeta && $scope.currentPath === "/") {
+			$scope.doExecOnPath("/");
 
 		} else if (fileMeta) {
 
 			if (fileMeta.is_dir) {
-				$ionicLoading.show({
-					template : 'Loading...'
-				});
-				$scope.goBackPath = $scope.currentPath;
-				$scope.currentPath = fileMeta.path;
-				//alert("called by non root directory: "+JSON.stringify(fileMeta));
-				cordova.exec(function success(data) {
-					console.log("browserrr " + JSON.stringify(data));
-					$scope.$apply(function(){
-					$scope.contents = data.response.contents;
-				});$ionicLoading.hide();
-
-					/*var obj={};
-
-					$scope.contents.unshift();*/
-
-				},
-					function err(err) {
-					console.log("brows errr!!!!!!!  " + err);
-				},
-					'IonBoxPlugin',
-					'getFolderContent',
-					[false, fileMeta.path]);
+				
+			$scope.doExecOnPath(fileMeta.path);
+			
+				
 			} else {
 				alert("called by non root file: file download not implemented yet");
 

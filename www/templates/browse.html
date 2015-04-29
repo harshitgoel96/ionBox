@@ -1,8 +1,5 @@
 <ion-view view-title="Browse">
-<ion-nav-buttons side="left" >
-<button ng-if="goBackPath!==currentPath" class="button button-icon icon ion-chevron-left" ng-click="goBack(goBackPath)">
 
-</button>
 </ion-nav-buttons>
 <ion-nav-buttons side="right">
       <button class="button button-icon icon ion-ios-minus-outline" ng-click="toggleDelete()">
@@ -18,7 +15,7 @@
 			<i ng-class="getIconClass(content.icon)"></i>
 			
 			
-			 <h2 style="height:22px !important">{{content.path}}</h2>
+			 <h2 style="height:22px !important">{{content.displayName}}</h2>
 			 
 			 <p ng-if="content.is_dir!=true">{{content.size}}</p>
 			 <p ng-if="content.is_dir">Folder</p>
