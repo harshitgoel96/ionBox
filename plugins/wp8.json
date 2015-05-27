@@ -1,0 +1,64 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"wp-package\" value=\"SQLitePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"wp-package\" value=\"DebugConsole\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"wp-package\" value=\"Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"wp-package\" value=\"InAppBrowser\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "Properties/WMAppManifest.xml": {
+                "parents": {
+                    "/Deployment/App/Capabilities": [
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_IDENTITY_DEVICE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<Capability Name=\"ID_CAP_NETWORKING\" />",
+                            "count": 2
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
+        },
+        "io.litehelpers.cordova.sqlite": {
+            "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
+        },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
+        }
+    },
+    "dependent_plugins": {}
+}

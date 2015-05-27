@@ -1,0 +1,14 @@
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\ApplicationIcon.png
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\Background.png
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\com.ionicframework.ionbox637903.dll
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\com.ionicframework.ionbox637903.pdb
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\AppManifest.xaml
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\Properties\WMAppManifest.xml
+D:\Workspace\ionBox\platforms\wp8\Bin\Debug\CordovaAppProj_Debug_AnyCPU.xap
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\App.g.cs
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\cordovalib\CordovaView.g.cs
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\MainPage.g.cs
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\com.ionicframework.ionbox637903.g.resources
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\com.ionicframework.ionbox637903.dll
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\com.ionicframework.ionbox637903.pdb
+D:\Workspace\ionBox\platforms\wp8\obj\Debug\XapCacheFile.xml
