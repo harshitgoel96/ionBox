@@ -27,6 +27,11 @@ module.exports = [
         "clobbers": [
             "SQLitePlugin"
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-whitelist/whitelist.js",
+        "id": "cordova-plugin-whitelist.whitelist",
+        "runs": true
     }
 ];
 module.exports.metadata = 
@@ -36,7 +41,8 @@ module.exports.metadata =
     "org.apache.cordova.console": "0.2.13",
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.inappbrowser": "0.6.0",
-    "io.litehelpers.cordova.sqlite": "0.7.7"
+    "io.litehelpers.cordova.sqlite": "0.7.7",
+    "cordova-plugin-whitelist": "1.0.1-dev"
 }
 // BOTTOM OF METADATA
 });

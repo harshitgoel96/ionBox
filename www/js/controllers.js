@@ -144,7 +144,7 @@ $scope.shouldShowDelete = false;
 										case 'page_white_php':
 										case 'page_white_visualstudio':
  
-										                return 'fa-code';
+										                return 'fa-code positive-color';
 										                break;
 										case 'folder':
 										case 'folder_app':
@@ -152,37 +152,36 @@ $scope.shouldShowDelete = false;
 										case 'folder_gray':
 										case 'folder_public':
 										case 'folder_star':
-										                return 'fa-folder-open';
+										                return 'fa-folder-open folder-color';
                 										break;
  
-										case 'page_white_acrobat' : return ' fa-file-pdf-o';break;
-										case 'page_white_film' : return ' fa-file-video-o';break;
+										case 'page_white_acrobat' : return ' fa-file-pdf-o red-media-color';break;
+										case 'page_white_film' : return ' fa-file-video-o red-media-color';break;
 										case 'page_white_tux' : return ' fa-linux';break;
-										case 'page_white_flash' : return 'fa-bolt';break;
+										case 'page_white_flash' : return 'fa-bolt ';break;
 										case 'page_white_cup' : return 'fa-coffee';break;
-										case 'page_white_ruby' : return 'fa-diamond';break;
+										case 'page_white_ruby' : return 'fa-diamond red-media-color';break;
 										case 'page_white_dvd' : return 'fa-dot-circle-o';break;
 										case 'page_white' : return 'fa-file';break;
-										case 'page_white_sound' : return 'fa-file-audio-o';break;
+										case 'page_white_sound' : return 'fa-file-audio-o red-media-color';break;
 										case 'page_white_excel' : return 'fa-file-excel-o';break;
-										case 'page_white_picture' : return 'fa-file-picture-o';break;
-										case 'page_white_powerpoint' : return 'fa-file-powerpoint-o';break;
+										case 'page_white_picture' : return 'fa-file-picture-o positive-color';break;
+										case 'page_white_powerpoint' : return 'fa-file-powerpoint-o red-media-color';break;
 										case 'page_white_text' : return 'fa-file-text';break;
-										case 'page_white_word' : return 'fa-file-word-o';break;
+										case 'page_white_word' : return 'fa-file-word-o positive-color';break;
 										case 'page_white_compressed' : return 'fa-file-zip-o';break;
 										case 'page_white_gear' : return 'fa-gears';break;
 										case 'package' : return 'fa-gift';break;
 										case 'page_white_vector' : return 'fa-magic';break;
 										case 'page_white_paint' : return 'fa-paint-brush';break;
-										case 'folder_user' : return 'fa-slideshare';break;
-										case 'folder_user_gray' : return 'fa-slideshare';break;
+										case 'folder_user' : return 'fa-slideshare  positive-color';break;
+										case 'folder_user_gray' : return 'fa-slideshare  positive-color';break;
 										default: return 'fa-file';
   
 	}
 			}
 	
 	
-	if(!ionic.Platform.isWindowsPhone()){
 	$scope.contents = [];
 	$scope.currentPath = "/";
 	$scope.goBackPath = "/";
@@ -277,29 +276,7 @@ $scope.shouldShowDelete = false;
 	}
 
 	
-}// end if not windows phone
-else{
-	$scope.contents= new Array();
-	var Data = JSON.parse('{"hash": "ad37ce1527997767665ceca95d063da8", "thumb_exists": false, "bytes": 0, "path": "/", "is_dir": true, "icon": "folder", "root": "dropbox", "contents": [{"rev": "380688e90e", "thumb_exists": false, "path": "/CSO  IPA lab F-1-0.10FP.app.zip", "is_dir": false, "client_mtime": "Thu, 25 Apr 2013 12:24:26 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 59803, "modified": "Thu, 25 Apr 2013 12:24:26 +0000", "size": "58.4 KB", "root": "dropbox", "mime_type": "application/zip", "revision": 56}, {"rev": "5d0688e90e", "thumb_exists": false, "path": "/dojo-release-1.10.1.zip", "is_dir": false, "client_mtime": "Thu, 18 Sep 2014 08:31:31 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 13698701, "modified": "Thu, 18 Sep 2014 08:31:31 +0000", "size": "13.1 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 93}, {"rev": "5a0688e90e", "thumb_exists": false, "path": "/fos_android_v29.zip", "is_dir": false, "client_mtime": "Tue, 02 Sep 2014 10:01:41 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 45936983, "modified": "Tue, 02 Sep 2014 10:01:41 +0000", "size": "43.8 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 90}, {"rev": "70688e90e", "thumb_exists": false, "path": "/Getting Started.pdf", "is_dir": false, "client_mtime": "Thu, 15 Mar 2012 13:47:04 +0000", "icon": "page_white_acrobat", "read_only": false, "modifier": null, "bytes": 246000, "modified": "Thu, 15 Mar 2012 13:47:04 +0000", "size": "240.2 KB", "root": "dropbox", "mime_type": "application/pdf", "revision": 7}, {"rev": "580688e90e", "thumb_exists": false, "path": "/iosFeetOnStreet.zip", "is_dir": false, "client_mtime": "Fri, 25 Jul 2014 09:03:22 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 165794592, "modified": "Fri, 25 Jul 2014 09:03:22 +0000", "size": "158.1 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 88}, {"rev": "850688e90e", "thumb_exists": false, "path": "/mycolt.zip", "is_dir": false, "client_mtime": "Fri, 21 Nov 2014 06:37:40 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 50902354, "modified": "Fri, 21 Nov 2014 06:37:40 +0000", "size": "48.5 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 133}, {"rev": "3a0688e90e", "thumb_exists": false, "path": "/newCSO_1.17_tg final.zip", "is_dir": false, "client_mtime": "Tue, 04 Jun 2013 07:52:29 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 8270863, "modified": "Tue, 04 Jun 2013 13:29:12 +0000", "size": "7.9 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 58}, {"rev": "590688e90e", "thumb_exists": false, "path": "/realIOSFeetOnStreet.zip", "is_dir": false, "client_mtime": "Fri, 25 Jul 2014 11:29:36 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 34469132, "modified": "Fri, 25 Jul 2014 11:29:36 +0000", "size": "32.9 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 89}, {"rev": "620688e90e", "thumb_exists": false, "path": "/special", "is_dir": true, "icon": "folder", "read_only": false, "modifier": null, "bytes": 0, "modified": "Sat, 27 Sep 2014 08:26:34 +0000", "size": "0 bytes", "root": "dropbox", "revision": 98}, {"rev": "5e0688e90e", "thumb_exists": false, "path": "/telerik.kendoui.professional.2014.2.903.trial.zip", "is_dir": false, "client_mtime": "Thu, 18 Sep 2014 08:32:03 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 33056198, "modified": "Thu, 18 Sep 2014 08:32:03 +0000", "size": "31.5 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 94}, {"rev": "420688e90e", "thumb_exists": false, "path": "/TG_ProvEng", "is_dir": true, "icon": "folder", "read_only": false, "modifier": null, "bytes": 0, "modified": "Fri, 16 Aug 2013 09:28:01 +0000", "size": "0 bytes", "root": "dropbox", "revision": 66}, {"rev": "5f0688e90e", "thumb_exists": false, "path": "/touch-2.4.0-commercial.zip", "is_dir": false, "client_mtime": "Thu, 18 Sep 2014 08:32:58 +0000", "icon": "page_white_compressed", "read_only": false, "modifier": null, "bytes": 56849198, "modified": "Thu, 18 Sep 2014 08:32:58 +0000", "size": "54.2 MB", "root": "dropbox", "mime_type": "application/zip", "revision": 95}], "size": "0 bytes"}');
-	console.log("HERREEEEEe "+Data.contents.length);
-	try{
-		var tempContents=Data.contents;
-		console.log("HERREEEEEe try :"+tempContents.length);
-		for(var i=0;i<tempContents.length;i++){
-				console.log("HERREEEEEe up "+i);
-				var indexS=tempContents[i].path.lastIndexOf("/");
-				var displayName=tempContents[i].path.substr(indexS+1);
-				tempContents[i].displayName=displayName;
-				console.log("HERREEEEEe mid "+i);
-				$scope.contents.push(tempContents[i]);
-				console.log("HERREEEEEe end"+i);
-			}
-	}
-	catch(err) {
-    conslole.log("ERRR "+err.message);
-	}
-					
-}
+
 
 
 })

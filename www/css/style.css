@@ -6,3 +6,14 @@ height: auto !important;
 .item-avatar-no-border{
 border-radius: 0 !important;
 }
+
+.folder-color{
+color: #ffd700  !important;
+}
+.positive-color{
+color: #4a87ee !important;
+}
+
+.red-media-color{
+color: #CB0909 !important;
+}

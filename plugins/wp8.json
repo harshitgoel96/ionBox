@@ -58,6 +58,9 @@
         },
         "org.apache.cordova.inappbrowser": {
             "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "{df3e3b00-f633-11e4-803e-3d0f494646bf}"
         }
     },
     "dependent_plugins": {}
