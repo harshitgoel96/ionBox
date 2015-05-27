@@ -3,3 +3,6 @@
 top: 90px !important;
 height: auto !important;
 }
+.item-avatar-no-border{
+border-radius: 0 !important;
+}

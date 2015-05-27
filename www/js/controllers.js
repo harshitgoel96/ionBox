@@ -157,6 +157,7 @@ angular.module('starter.controllers', [])
 						var temp={};
 						temp.is_dir=true;
 						temp.path=parentPath;
+						temp.icon="folder";
 						temp.displayName='..';
 						//temp.isGoBack==true;
 					$scope.contents.unshift(temp);
@@ -223,19 +224,53 @@ angular.module('starter.controllers', [])
 	}
 	$scope.getIconClass = function (appIcon) {
 		//console.log(appIcon);
-		switch (appIcon) {
-		case "page_white_compressed":
-			return "icon fa fa-file-archive-o";
-			break;
-		case "page_white_acrobat":
-			return "icon fa fa-file-pdf-o";
-			break;
-		case "folder":
-			return "icon ion-folder";
-			break;
-		}
-		return "icon ion-document"
+			switch (appIcon) {
+		 
+										case 'page_white_actionscript':
+										case 'page_white_c':
+										case 'page_white_code':
+										case 'page_white_cplusplus':
+										case 'page_white_csharp':
+										case 'page_white_php':
+										case 'page_white_visualstudio':
+ 
+										                return 'fa-code';
+										                break;
+										case 'folder':
+										case 'folder_app':
+										case 'folder_camera':
+										case 'folder_gray':
+										case 'folder_public':
+										case 'folder_star':
+										                return 'fa-folder-open';
+                										break;
+ 
+										case 'page_white_acrobat' : return ' fa-file-pdf-o';break;
+										case 'page_white_film' : return ' fa-file-video-o';break;
+										case 'page_white_tux' : return ' fa-linux';break;
+										case 'page_white_flash' : return 'fa-bolt';break;
+										case 'page_white_cup' : return 'fa-coffee';break;
+										case 'page_white_ruby' : return 'fa-diamond';break;
+										case 'page_white_dvd' : return 'fa-dot-circle-o';break;
+										case 'page_white' : return 'fa-file';break;
+										case 'page_white_sound' : return 'fa-file-audio-o';break;
+										case 'page_white_excel' : return 'fa-file-excel-o';break;
+										case 'page_white_picture' : return 'fa-file-picture-o';break;
+										case 'page_white_powerpoint' : return 'fa-file-powerpoint-o';break;
+										case 'page_white_text' : return 'fa-file-text';break;
+										case 'page_white_word' : return 'fa-file-word-o';break;
+										case 'page_white_compressed' : return 'fa-file-zip-o';break;
+										case 'page_white_gear' : return 'fa-gears';break;
+										case 'package' : return 'fa-gift';break;
+										case 'page_white_vector' : return 'fa-magic';break;
+										case 'page_white_paint' : return 'fa-paint-brush';break;
+										case 'folder_user' : return 'fa-slideshare';break;
+										case 'folder_user_gray' : return 'fa-slideshare';break;
+										default: return 'fa-file';
+  
 	}
+			}
+	
 })
 
 .controller('PlaylistCtrl', function ($scope, $stateParams) {});

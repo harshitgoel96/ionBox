@@ -25,6 +25,7 @@ public class Constants {
 	public static final String getThumbNailUrl="https://api-content.dropbox.com/1/thumbnails/auto";
 	public static final String getPreviewOfDoc="https://api-content.dropbox.com/1/previews/auto";
 	public static final String getSharedFolder="https://api.dropbox.com/1/shared_folders";
+	
 	public static boolean strEmptyOrNull(String value) {
 		if(value!=null && !value.isEmpty())
 		{
