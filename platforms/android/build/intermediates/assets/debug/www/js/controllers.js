@@ -174,8 +174,8 @@ $scope.shouldShowDelete = false;
 										case 'package' : return 'fa-gift';break;
 										case 'page_white_vector' : return 'fa-magic';break;
 										case 'page_white_paint' : return 'fa-paint-brush';break;
-										case 'folder_user' : return 'fa-slideshare folder-color';break;
-										case 'folder_user_gray' : return 'fa-slideshare folder-color';break;
+										case 'folder_user' : return 'fa-slideshare  positive-color';break;
+										case 'folder_user_gray' : return 'fa-slideshare  positive-color';break;
 										default: return 'fa-file';
   
 	}
