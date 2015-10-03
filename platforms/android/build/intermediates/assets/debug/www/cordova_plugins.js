@@ -42,7 +42,7 @@ module.exports.metadata =
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.inappbrowser": "0.6.0",
     "io.litehelpers.cordova.sqlite": "0.7.7",
-    "cordova-plugin-whitelist": "1.0.1-dev"
+    "cordova-plugin-whitelist": "1.0.0"
 }
 // BOTTOM OF METADATA
 });
