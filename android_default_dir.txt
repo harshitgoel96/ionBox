@@ -1,0 +1,5 @@
+public static String	DIRECTORY_DOCUMENTS	Standard directory in which to place documents that have been created by the user.
+public static String	DIRECTORY_DOWNLOADS	Standard directory in which to place files that have been downloaded by the user.
+public static String	DIRECTORY_MOVIES	Standard directory in which to place movies that are available to the user.
+public static String	DIRECTORY_MUSIC	Standard directory in which to place any audio files that should be in the regular list of music for the user.
+public static String	DIRECTORY_PICTURES
